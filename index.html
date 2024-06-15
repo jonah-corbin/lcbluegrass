@@ -23,7 +23,8 @@
             </div>
             <div class="artists-nav nav-item">
               <p>Artists</p>
-            </div><!--
+            </div>
+            <!--
             <div class="mission-nav nav-item">
               <p>Mission</p>
             </div>-->
@@ -81,15 +82,6 @@
           </div>
           <div class="artist">
             <div class="name">
-              <p>Nothin&#39; Fancy</p>
-              <!--<p>Six Time Entertainers of the Year</p>-->
-            </div>
-            <!--<div class="set-time">
-                    <p>Friday @ 6pm</p>
-                </div>-->
-          </div>
-          <div class="artist">
-            <div class="name">
               <p>Remingtion Ryde</p>
             </div>
           </div>
@@ -105,7 +97,7 @@
           </div>
           <div class="artist">
             <div class="name">
-              <p>Deeper Shade of Blue</p>
+              <p>Troy Pope</p>
             </div>
           </div>
           <div class="artist">
@@ -114,39 +106,34 @@
             </div>
           </div>
         </div>
-        <!--<div id="mission" class="mission section">
+        <div id="mission" class="mission section">
           <div class="mission header">
             <p>Mission</p>
           </div>
           <div class="mission-statement">
             <p>
-              All profits will benefit Audrey Westfall, who is battling Acute
-              Lymphoblastic Leukemia.
+              Our fundraiser aims to empower families and strengthen our
+              community by supporting the Lewis County Family Resource Network.
+              Through collective generosity and support, we strive to enhance
+              access to vital resources, educational opportunities, and
+              essential services for families in need. By coming together, we
+              aim to foster a community where every family feels supported,
+              empowered, and equipped to thrive. Join us in making a meaningful
+              impact and building a brighter future for families throughout
+              Lewis County.
+              <br /><br />
+              The FRN serves as the "umbrella" organization for over 50 programs
+              and projects, which range from full-time programs that employ
+              multiple people, to community events run by volunteers, to small
+              once-a-year projects. The FRN is proud to help facilitate,
+              support, organize, partner with, and mobilize programs and
+              projects as community needs change.
             </p>
-            <p>
-              Audrey is a 4th grade student at St. Patrick’s elementary school
-              in Weston. She and her family live in Walkersville, WV. She loves
-              being outdoors, hiking, swimming at the lake and hunting with her
-              Dad. She is also a member of the Crawford Indian Trails 4-H club.
-              And recently she has started taking horseback riding lessons at
-              Silver Mist Stables in Jane Lew. Unfortunately, she was recently
-              diagnosed with Acute Lymphoblastic Leukemia. She is undergoing
-              treatment at WVU Children’s Hospital at Ruby in Morgantown, WV.
-            </p>
-            <div class="image-container">
-              <img src="images/IMG_5379.jpeg" />
-            </div>
-            <div class="image-container">
-              <img src="images/IMG_8510.jpeg" />
-            </div>
-          </div>-->
+          </div>
         </div>
         <div id="past-years" class="past-years section">
-          <div class="past-years header">
-            <p>LCBF 2019</p>
-          </div>
           <div class="past-years-gallery">
-            <img src="images/banjo-bois.jpg" />
+            <img src="images/ai-bg.webp" />
           </div>
         </div>
         <div id="tickets" class="tickets section">
@@ -273,13 +260,7 @@
               <img src="images/mcartys.png" />
             </div>
             <div class="sponsor">
-              <img src="images/foster.png" />
-            </div>
-            <div class="sponsor">
               <img src="images/crazy_horse.png" />
-            </div>
-            <div class="sponsor">
-              <img src="images/south_texas.png" />
             </div>
             <div class="sponsor">
               <img src="images/ralphs_auto_service.png" />
@@ -351,8 +332,8 @@
       </div>
       <div class="footer">
         <p>
-          Copyright &#169;2022, The Lewis County Bluegrass Festival. All rights
-          reserved
+          Copyright &#169; <span id="copyright-year"></span>, The Lewis County
+          Bluegrass Festival. All rights reserved
         </p>
         <p>
           Email:
@@ -364,6 +345,10 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
+      const copyrightYear = new Date().getFullYear();
+
+      $("#copyright-year").text(copyrightYear);
+
       $(document).on("click", ".hamburger", function () {
         $(".navbar").stop().toggleClass("open");
       });
